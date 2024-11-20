@@ -6,22 +6,7 @@ import numpy as np
 from PIL import Image
 import io
 
-# Custom CSS to position text at the top-left corner
-st.markdown("""
-    <style>
-        .title {
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #000000;
-        }
-    </style>
-""", unsafe_allow_html=True)
 
-# Display your name in the top-left corner
-st.markdown('<div class="title">Created by Shubham Hagawane</div>', unsafe_allow_html=True)
 # Function to convert PIL Image to OpenCV format
 def pil_to_cv(image):
     return cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
@@ -57,7 +42,7 @@ def shear_image(image, shear_factor):
 # Streamlit App
 def main():
     st.title("Affine Transformations on Images")
-    st.write("Upload an image and apply affine transformations.")
+    st.write("Upload an image and apply affine transformations. -- developed by Shubham Hagawane")
 
     # Image Upload
     uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])

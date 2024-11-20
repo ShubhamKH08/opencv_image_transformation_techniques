@@ -6,6 +6,22 @@ import numpy as np
 from PIL import Image
 import io
 
+# Custom CSS to position text at the top-left corner
+st.markdown("""
+    <style>
+        .title {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Display your name in the top-left corner
+st.markdown('<div class="title">Roll no: 104  Name: Shubham Hagawane</div>', unsafe_allow_html=True)
 # Function to convert PIL Image to OpenCV format
 def pil_to_cv(image):
     return cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)

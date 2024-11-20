@@ -42,7 +42,7 @@ def shear_image(image, shear_factor):
 # Streamlit App
 def main():
     st.title("Affine Transformations on Images")
-    st.write("Upload an image and apply affine transformations.")
+    st.write("Upload an image and apply affine transformations. -- developed by Shubham Hagawane")
 
     # Image Upload
     uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])

@@ -1,11 +1,19 @@
-# main.py
-
 import streamlit as st
 import cv2
 import numpy as np
 from PIL import Image
 import io
 
+
+# Initialize visitor counter in session state
+if "visitor_count" not in st.session_state:
+    st.session_state["visitor_count"] = 0
+
+# Increment visitor count
+st.session_state["visitor_count"] += 1
+
+# Display visitor count
+st.sidebar.header(f"Views: {st.session_state['visitor_count']}")
 
 # Function to convert PIL Image to OpenCV format
 def pil_to_cv(image):
